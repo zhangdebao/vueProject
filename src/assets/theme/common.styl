@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.iconfont:hover{
+  cursor: pointer;
+}
+/* 内联块卡片头部导航 */
+.inline-block{
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+}
+/* 非IE浏览器 */
+/*滚动条整体部分，其中的属性有width,height,background,border等（就和一个块级元素一样） */
+::-webkit-scrollbar {/*滚动条整体样式*/
+  width: 12px;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 12px;
+}
+/*滚动条两端的按钮，可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果 */
+::-webkit-scrollbar-button{
+  display: none;
+}
+/* 外层轨道，可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果*/
+:-webkit-scrollbar-track {
+  border-radius: 0;
+  background: rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0, 0.2);
+}
+/*内层轨道，滚动条中间部分*/
+::-webkit-scrollbar-track-piece{
+}
+/* 滚动条里面可以拖动的那部分 */
+::-webkit-scrollbar-thumb {
+  // border-radius: 3px;
+  background: rgba(132, 152, 175, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(132, 152, 175, 0.5);
+}
+/*三角箭头的颜色*/
+*{
+  // scrollbar-arrow-color: #ffffff;
+  /*滚动条滑块按钮的颜色*/
+  scrollbar-face-color: #d0ced1;
+  /*滚动条整体颜色*/
+  // scrollbar-highlight-color: #ffffff;
+  /*滚动条阴影*/
+  // scrollbar-shadow-color: #ffffff;
+  /*滚动条轨道颜色*/
+  // scrollbar-track-color: #ffffff;
+}
+/* 右侧表单 */
+.rightForm {
+  position relative;
+  overflow: auto;
+}
+.rightForm .el-col:first-child{
+  margin-top: 15px;
+}
+/* 右侧表单的按钮*/
+.rightForm + div {
+  padding-top: 2px;border-top: 1px solid #ebeef5;
+}
+/* 表格模块 */
+.tableCard {
+  margin-bottom: 20px;
+}
+/*滚动条*/
+.commmonScoll{
+  position: relative;
+  overflow: auto;
+  height: 100%;
+  padding: 15px;
+}
+/* 路由加载动画 */
+.fade-enter{
+  width: 0;
+}
+.fade-enter-active{
+  width: 100%;
+  transition: width 0.5s;
+}
+
+.fade-leave-active {
+  width: 100%;
+  transition: width 0.5s;
+}
+.fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  width: 0;
+}
+
+
+.el-transfer-panel {
+  width: 40% !important;
+}
+/* 更改表格行的内间距 */
+.el-table--mini td, .el-table--mini th {
+    padding: 3px 0 !important;
+}
+/*
+* 表头
+ */
+.el-table th{
+    background-color: #59C7f9;
+    color: white;
+}
+/*
+* 分页
+ */
+.el-pagination{
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.el-card {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.02);
+}
+/* 更改卡片头部样式 */
+.el-card__header{
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  background-color: #fdfcfc !important;
+  color: #55657c !important;
+}
+.el-card__body{
+  padding: 0 10px !important;
+}
+.el-popper[x-placement^=right] .popper__arrow::after {
+    border-right-color: rgba(51, 66, 89, 1);
+}
+.popper-class.el-popover{
+  border: none;
+}
+/*
+ * 输入框
+ */
+.el-input__inner{
+  border-radius: 0;
+}
+/*
+ * 追加表单验证 label后的*图标
+ */
+ /*
+ * 移除表单验证 label前的*图标
+ */
+ .el-form-item.is-required .el-form-item__label:before {
+   content: '' !important;
+  margin-right: 0 !important;
+ }
+.el-form-item.is-required .el-form-item__label:after {
+    content: '*';
+    color: #f56c6c;
+    margin-left: 4px;
+}
+.el-badge__content {
+    background-color: #f56c6c;
+    border-radius: 6px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    padding: 0 4px;
+    text-align: center;
+    border: 1px solid #e60d0d;
+}
